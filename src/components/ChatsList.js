@@ -50,7 +50,7 @@ class ChatsList extends React.Component {
             handleReceivedMessage={this.handleReceivedMessage}
           />
         ) : null}
-        <h2>Chats</h2>
+        <h2>Chat rooms</h2>
         <ul>{mapChats(chats, this.handleClick)}</ul>
         <NewChatForm />
         {activeChat ? (

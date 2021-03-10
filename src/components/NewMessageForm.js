@@ -3,7 +3,7 @@ import { API_ROOT, HEADERS } from '../constants';
 
 class NewMessageForm extends React.Component {
   state = {
-    text: '',
+    content: '',
     chat_id: this.props.chat_id
   };
 
@@ -12,7 +12,7 @@ class NewMessageForm extends React.Component {
   };
 
   handleChange = e => {
-    this.setState({ text: e.target.value });
+    this.setState({ content: e.target.value });
   };
 
   handleSubmit = e => {
@@ -23,7 +23,7 @@ class NewMessageForm extends React.Component {
       headers: HEADERS,
       body: JSON.stringify(this.state)
     });
-    this.setState({ text: '' });
+    this.setState({ content: '' });
   };
 
   render = () => {
@@ -34,7 +34,7 @@ class NewMessageForm extends React.Component {
           <br />
           <input
             type="text"
-            value={this.state.text}
+            value={this.state.content}
             onChange={this.handleChange}
           />
           <input type="submit" />

@@ -24,7 +24,7 @@ class NewChatForm extends React.Component {
     return (
       <div className="newChatForm">
         <form onSubmit={this.handleSubmit}>
-          <label>New Chat:</label>
+          <label>New Chatroom:</label>
           <br />
           <input
             type="text"
